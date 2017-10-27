@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <!-- 引入css -->
+  <link rel="stylesheet" href="css/style.css" />
+ </head>
+ <body>
+
+	<input type="button" value="开始游戏" id="btnStart"/>
+
+
+<script>
+
+var oBtn = document.getElementById("btnStart");
+
+
+oBtn.onclick = function() {
+
+	// 点击时，创建4个方块（正方形排列）
+	//   思路：
+	box()
+}
+
+
+// 在页面上创建1个方块
+function box() {
+	// 1. 创建1个div元素
+	var oDiv = document.createElement("div")
+
+	// 2. 设置div的 宽、高、位置、样式
+	oDiv.style.width = "100px";
+	oDiv.style.height = "100px";
+	oDiv.style.background = "red";
+	oDiv.style.left = "100px";
+	oDiv.style.top = "100px";
+	//  设置元素的 class 值
+	oDiv.className = "block";
+
+	// 3. 添加到页面上
+	document.body.appendChild(oDiv)
+}
+
+</script>  
+
+ </body>
+</html>
